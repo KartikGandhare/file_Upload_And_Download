@@ -1,0 +1,23 @@
+server:
+  port: 1968
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/file
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    
+  servlet:
+    multipart:
+        enabled: true
+        file-size-threshold: 200KB
+        max-file-size: 200MB
+        max-request-size: 215MB
+       
